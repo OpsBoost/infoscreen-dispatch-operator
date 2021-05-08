@@ -1,0 +1,24 @@
+# permissions for end users to edit enrolments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: enrolment-editor-role
+rules:
+- apiGroups:
+  - client.opsboost.dev
+  resources:
+  - enrolments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - client.opsboost.dev
+  resources:
+  - enrolments/status
+  verbs:
+  - get

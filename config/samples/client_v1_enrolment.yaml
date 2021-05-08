@@ -1,0 +1,7 @@
+apiVersion: client.opsboost.dev/v1
+kind: Enrolment
+metadata:
+  name: enrolment-sample
+spec:
+  # Add fields here
+  foo: bar

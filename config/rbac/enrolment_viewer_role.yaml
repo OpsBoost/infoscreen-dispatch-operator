@@ -1,0 +1,20 @@
+# permissions for end users to view enrolments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: enrolment-viewer-role
+rules:
+- apiGroups:
+  - client.opsboost.dev
+  resources:
+  - enrolments
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - client.opsboost.dev
+  resources:
+  - enrolments/status
+  verbs:
+  - get

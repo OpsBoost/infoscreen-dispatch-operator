@@ -1,0 +1,26 @@
+componentConfig: true
+domain: opsboost.dev
+layout:
+- go.kubebuilder.io/v3
+projectName: infoscreen-dispatch
+repo: github.com/OpsBoost/infoscreen-dispatch-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: opsboost.dev
+  group: client
+  kind: Client
+  path: github.com/OpsBoost/infoscreen-dispatch-operator/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: opsboost.dev
+  group: client
+  kind: Enrolment
+  path: github.com/OpsBoost/infoscreen-dispatch-operator/api/v1
+  version: v1
+version: "3"
